@@ -13,7 +13,8 @@ function TodoRoot() {
 
   const fetchItems = async () => {
     try {
-      const { headers, data } = await axios.get('/api/todos')      setItems(data)
+      const { headers, data } = await axios.get('/api/todos')
+      setItems(data)
       // console.log('request headers', headers)
     } catch (err) {
       console.error('request error', err.request.headers)
